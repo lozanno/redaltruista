@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# WP-CLI apuntando a la copia de producción de bin/ensayo.sh. Ejemplo:  bin/wp-ensayo eval-file bin/publicar.php simular
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+exec php "$ROOT/local/wp-cli.phar" --path="$ROOT/local/ensayo" "$@"

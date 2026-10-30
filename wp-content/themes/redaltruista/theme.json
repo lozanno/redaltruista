@@ -180,8 +180,9 @@
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-condensed)",
-					"fontSize": "1.05rem",
-					"letterSpacing": "0.5px"
+					"fontSize": "0.95rem",
+					"letterSpacing": "0.5px",
+					"textTransform": "uppercase"
 				},
 				"color": { "text": "var(--wp--preset--color--gris-menu)" },
 				"elements": {

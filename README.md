@@ -88,15 +88,25 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 
 ## Migración a producción (GoDaddy)
 
-1. Respaldo completo (archivos + base de datos).
-2. Subir `themes/redaltruista` y `plugins/ra-directorio` por el administrador de archivos o SFTP.
-3. Activar **ra-directorio** → Asociaciones → Importar.
-4. Mandar la página antigua "Asociaciones Afiliadas" a la papelera (el directorio nuevo ocupa esa URL).
-5. Rehacer las páginas institucionales con bloques y patrones (en un staging o como borradores).
-   - **Eventos**: cada evento es una página hija de Eventos con imagen destacada, y la cuadrícula se arma sola (orden por fecha de publicación). En producción, a Diplomado 2019 y a los Encuentros 2017, 2018, 2019, 2023 y 2024 asígnales *Superior: Eventos* e imagen destacada (`diplomado_2019-1.jpg`, `1erEncuentro_2017.jpg`, `2erEncuentro_2018.jpg`, `3erEncuentro_2019.jpg`, `4Encuentro-1.jpg` y `encuentro-2024-portada.jpg`, que hay que subir desde `medios/`: los carteles de 2023 y 2024 invitaban a registrarse), y a Encuentro 2017 la fecha 2017-09-01 para que quede en orden. El contenido de cada una se pone eligiendo su patrón ("Evento – Encuentro 2024", etc.). Las URL viejas (`/encuentro-2024/`) redirigen solas a `/eventos/encuentro-2024/`.
-6. Activar el tema **Red Altruista**. En el Editor del sitio, asignar el logo (bloque Logo del sitio): `Logo-Comercial-small.png` ("LA RED Altruista", el logo principal que usa Avada hoy). `logo-red-altruismo-color.png` es el diseño anterior y no se usa.
-7. Desactivar Avada y Avada Builder/Core. Revisar menú, formularios y URLs.
-8. Formularios: Contact Form 7 ya está instalado en producción. Crear los del sitio con `bin/formularios.php` y borrar el formulario de ejemplo de 2017 ("Contact form 1", en inglés y con envío a un correo personal). Hacer un envío de prueba para confirmar que llegan a `info@redaltruista.org`.
+Todo el cambio lo hace `bin/publicar.php` en una sola corrida (≈1 s), con WP-CLI por SSH:
+
+1. **Respaldo completo** desde GoDaddy (archivos + base de datos).
+2. **Subir por SFTP** (no cambia nada del sitio mientras no se active):
+   - `wp-content/themes/redaltruista` y `wp-content/plugins/ra-directorio` a su lugar en `wp-content/`.
+   - `bin/publicar.php`, `bin/formularios.php` y la carpeta `medios/` a una misma carpeta, p. ej. `~/publicar/`.
+3. **Simular**: `wp eval-file ~/publicar/publicar.php simular` — revisa que estén las páginas, patrones, imágenes y el logo, y lista lo que hará.
+4. **Publicar**: `wp eval-file ~/publicar/publicar.php`. En orden:
+   - activa Contact Form 7, ra-directorio y el tema Red Altruista;
+   - importa las 28 asociaciones (logos de la Biblioteca) y crea el formulario «Contacto» (el de ejemplo de 2017 va a la papelera);
+   - pone a cada página el contenido de su patrón, con título, plantilla, página superior, imagen destacada y fecha (el contenido de Avada queda como revisión). La portada actual (`home-2`) recibe Inicio; los eventos pasan debajo de Eventos (las URL viejas redirigen solas) y se sube `encuentro-2024-portada.jpg`;
+   - pasa a borrador Programas y Servicios y Registro (sin Avada mostrarían shortcodes) y manda a la papelera la página «Asociaciones Afiliadas» (el directorio ocupa su URL);
+   - pone el logo (`Logo-Comercial-small.png`) y desactiva Avada Builder y Avada Core.
+5. **Revisar** el sitio y hacer un envío de prueba en /contactanos/ (debe llegar a `info@redaltruista.org`).
+6. **Volver atrás**, si hiciera falta: restaurar el respaldo (o activar Avada y sus plugins: el contenido anterior está en las revisiones de cada página).
+
+Es idempotente: si algo falla a medias, se corrige y se vuelve a correr. Las páginas y adjuntos se buscan por slug y por ID (los mismos que en producción).
+
+**Ensayo local** sobre una copia exacta de producción (Avada incluido, MySQL de Homebrew): `bin/ensayo.sh` la rehace desde el respaldo y la sirve en http://localhost:8081; luego `bin/wp-ensayo eval-file bin/publicar.php`. Ensayado con el respaldo del 30-oct-2026: sin avisos, todas las páginas responden, el formulario envía.
 
 ## Pendientes conocidos
 
