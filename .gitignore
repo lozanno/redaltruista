@@ -10,3 +10,6 @@ local/
 
 # Archivos por borrar (no van al repo)
 _to_delete/
+
+# Respaldos completos del sitio de GoDaddy (traen wp-config.php con credenciales)
+*_full_*/
