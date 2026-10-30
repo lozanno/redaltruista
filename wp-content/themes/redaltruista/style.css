@@ -143,6 +143,15 @@ Text Domain:       redaltruista
 .ra-hito .ra-historia__anio { margin: 0; }
 .ra-hito h3 { margin-top: 0.25rem; }
 
+/* ---------- Caminos (Inicio) ---------- */
+.ra-camino { overflow: hidden; border-radius: 6px; }
+.ra-camino > .wp-block-image { margin: 0; }
+.ra-camino > .wp-block-image img {
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+
 /* ---------- Página Contribuye ---------- */
 /* Tarjetas con el botón pegado abajo, aunque los textos tengan distinto largo. */
 .ra-accion { display: flex; flex-direction: column; }

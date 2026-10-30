@@ -15,7 +15,7 @@ wp-content/
   - Montserrat (títulos), Raleway (texto) y Roboto Condensed (menú y botones), servidas desde el propio tema (`assets/fonts`, sin Google Fonts).
 - **Plantillas**: `page` (con banda de título), `page-sin-titulo` (ancho completo, para Inicio y páginas armadas con secciones), `archive-asociacion` (directorio), `taxonomy-area-servicio`, `single-asociacion`, `single`, `index`, `404`.
 - **Partes**: `header` (logo, menú, botones Voluntario/Dona) y `footer` (acerca de, contacto, redes).
-- **Patrones** (insertador → Red Altruista): portada, nuestros programas (ancla `#programas`), cifras, llamado a afiliarse, tarjeta de persona.
+- **Patrones** (insertador → Red Altruista): portada, objetivo, caminos (conoce / afíliate / constitúyete), nuestros programas (ancla `#programas`), cifras, nuestras asociaciones (con filtro por área), llamado a afiliarse, tarjeta de persona.
 - **Patrones de página** (`patterns/pagina-*.php`): contenido completo de cada página institucional. Al crear o editar la página en producción, elige el patrón (p. ej. "Página – Sobre nosotros" para `/acerca-de/`, con la plantilla Página).
 
 ## Plugin `ra-directorio`
@@ -75,7 +75,7 @@ bin/serve.sh                 # http://localhost:8080  ·  admin / admin
 
 Si no tienes PHP: `brew install php`.
 
-Ya trae: el tema y el plugin activos, las 28 asociaciones importadas, una página de Inicio armada con los patrones, y páginas vacías para el resto del menú.
+Ya trae: el tema y el plugin activos, las 28 asociaciones importadas con logos y las páginas del menú armadas con sus patrones de página.
 
 Para cargar los logos reales, ponlos en `logos/` (mismos nombres de archivo que en el sitio) y corre:
 
@@ -100,5 +100,5 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 
 ## Pendientes conocidos
 
-- Las cifras de voluntarios y proyectos (patrón "Cifras") quedan como `XX` hasta que el cliente dé los números.
+- Las cifras de voluntarios (203) y proyectos (32) vienen del sitio actual; el cliente las actualiza en la página de Inicio. El número de asociaciones es automático.
 - Formularios "Registro – Asociación" y "Constituirse": agregarlos a `bin/formularios.php` (Contact Form 7) y enlazarlos desde el llamado "Afilia tu asociación".

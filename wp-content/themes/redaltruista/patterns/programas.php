@@ -23,7 +23,7 @@
 			<h3 class="wp-block-heading has-large-font-size">1. Promoción y vinculación</h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
-			<p>Escribe aquí la descripción del programa.</p>
+			<p>Promovemos la visibilidad y el reconocimiento del trabajo de las asociaciones y su impacto en la comunidad, incentivando la participación ciudadana a través del voluntariado, los donativos y el compromiso social. Fomentamos alianzas estratégicas que fortalezcan la colaboración entre las asociaciones y los sectores y actores sociales, impulsando un impacto positivo en el desarrollo comunitario, promoviendo una identidad altruista y consolidando un espíritu de trabajo colaborativo.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -34,7 +34,7 @@
 			<h3 class="wp-block-heading has-large-font-size">2. Capacitación y fortalecimiento institucional</h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
-			<p>Escribe aquí la descripción del programa.</p>
+			<p>Desarrollamos las capacidades organizacionales, operativas e institucionales de las asociaciones civiles de Puerto Vallarta y Bahía de Banderas, para incrementar su impacto y sostenibilidad. Brindamos asesoría especializada a grupos interesados en constituirse formalmente como asociación civil y acompañamos a nuestras organizaciones miembros en el fortalecimiento de su estructura y gobernanza, promoviendo una labor social más sólida, estratégica y transformadora.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -45,7 +45,7 @@
 			<h3 class="wp-block-heading has-large-font-size">3. Consolidación de una red de asociaciones</h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph -->
-			<p>Escribe aquí la descripción del programa.</p>
+			<p>Impulsamos una red de colaboración entre asociaciones civiles, con una visión compartida de transformación social, articulando esfuerzos que multipliquen el impacto de sus iniciativas y generando espacios de intercambio de conocimientos, experiencias y recursos.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
