@@ -27,6 +27,7 @@ require_once RA_DIR_PATH . 'includes/post-types.php';
 require_once RA_DIR_PATH . 'includes/meta-box.php';
 require_once RA_DIR_PATH . 'includes/admin-columns.php';
 require_once RA_DIR_PATH . 'includes/blocks.php';
+require_once RA_DIR_PATH . 'includes/shortcodes.php';
 require_once RA_DIR_PATH . 'includes/importer.php';
 require_once RA_DIR_PATH . 'includes/admin-import.php';
 
