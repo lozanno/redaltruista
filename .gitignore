@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+*.log
+.env
+# Logos descargados del sitio: viven en la Biblioteca de medios, no en el repo.
+logos/
+
+# WordPress local (se genera aparte, no va al repo)
+local/
+
+# Archivos por borrar (no van al repo)
+_to_delete/

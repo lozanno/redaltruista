@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ra/asociacion-enlaces",
+	"title": "Enlaces de la asociación",
+	"category": "theme",
+	"icon": "admin-links",
+	"description": "Botón al sitio web y redes sociales de la asociación. Úsalo dentro de un Query Loop o en la plantilla de la asociación.",
+	"textdomain": "ra-directorio",
+	"usesContext": [ "postId", "postType" ],
+	"attributes": {
+		"buttonText": {
+			"type": "string",
+			"default": "Ir a la web"
+		},
+		"showButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"showContact": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": false,
+		"spacing": { "margin": true, "padding": true },
+		"layout": {
+			"allowSwitching": false,
+			"allowInheriting": false,
+			"default": { "type": "flex", "flexWrap": "wrap", "justifyContent": "space-between", "verticalAlignment": "center" }
+		}
+	},
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}

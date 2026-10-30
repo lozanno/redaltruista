@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# WP-CLI apuntando al WordPress local. Ejemplo:  bin/wp ra-directorio import --update --logos=logos
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+exec php "$ROOT/local/wp-cli.phar" --path="$ROOT/local/wp" "$@"

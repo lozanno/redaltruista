@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"960px"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+	<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"2px","fontSize":"0.85rem"}},"fontFamily":"roboto-condensed"} -->
+	<p class="has-roboto-condensed-font-family" style="font-size:0.85rem;letter-spacing:2px;text-transform:uppercase"><a href="/asociaciones-afiliadas/">← Asociaciones Afiliadas</a></p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|40"}}}} -->
+	<div class="wp-block-columns are-vertically-aligned-center" style="margin-top:var(--wp--preset--spacing--40)">
+		<!-- wp:column {"verticalAlignment":"center","width":"35%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:35%">
+			<!-- wp:post-featured-image {"aspectRatio":"1","scale":"contain","style":{"border":{"radius":"6px","width":"1px","color":"#e8eeee"},"spacing":{"padding":{"top":"1rem","bottom":"1rem","left":"1rem","right":"1rem"}}}} /-->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"65%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:65%">
+			<!-- wp:post-terms {"term":"area-servicio","separator":" · ","style":{"typography":{"fontSize":"0.85rem","textTransform":"uppercase","letterSpacing":"1px"}},"textColor":"primario-claro","fontFamily":"roboto-condensed"} /-->
+
+			<!-- wp:post-title {"level":1,"fontSize":"xx-large"} /-->
+
+			<!-- wp:post-content {"layout":{"type":"default"}} /-->
+
+			<!-- wp:ra/asociacion-enlaces {"showContact":true,"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} /-->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:pattern {"slug":"redaltruista/cta-afiliate"} /-->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

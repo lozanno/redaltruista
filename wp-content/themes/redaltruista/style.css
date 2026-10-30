@@ -1,0 +1,106 @@
+/*
+Theme Name:        Red Altruista
+Theme URI:         https://redaltruista.org
+Author:            Diego Lozano
+Description:       Tema de bloques ligero para la Red de Asociaciones Altruistas de Puerto Vallarta y Bahía de Banderas. Reemplaza a Avada.
+Version:           1.0.0
+Requires at least: 6.6
+Tested up to:      7.1
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       redaltruista
+*/
+
+/* Casi todo el diseño vive en theme.json. Aquí solo va lo que theme.json no cubre. */
+
+/* ---------- Header ---------- */
+.ra-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.admin-bar .ra-header { top: var(--wp-admin--admin-bar--height, 32px); }
+
+.ra-header .wp-block-navigation a:hover,
+.ra-header .wp-block-navigation .current-menu-item > a {
+	color: var(--wp--preset--color--primario);
+}
+
+/* ---------- Tarjetas de asociación ---------- */
+.ra-card {
+	height: 100%;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ra-card:hover {
+	box-shadow: 0 10px 30px rgba(38, 46, 68, 0.12);
+	transform: translateY(-2px);
+}
+.ra-card .wp-block-post-featured-image img {
+	object-fit: contain;
+	background: #fff;
+}
+.ra-card .wp-block-post-title a { text-decoration: none; }
+.ra-card .wp-block-post-title a:hover { color: var(--wp--preset--color--primario-claro); }
+/* El bloque de enlaces queda pegado al fondo de la tarjeta. */
+.ra-card > .ra-enlaces { margin-top: auto; }
+
+/* ---------- Bloque ra/asociacion-enlaces ---------- */
+.ra-enlaces {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+}
+.ra-enlaces .wp-block-buttons { margin: 0; }
+.ra-enlaces .wp-block-social-links { margin: 0; gap: 0.5rem; }
+.ra-enlaces .wp-social-link { color: var(--wp--preset--color--primario); }
+.ra-enlaces .wp-social-link:hover { color: var(--wp--preset--color--acento); }
+.ra-enlaces .ra-contacto { flex-basis: 100%; margin: 0; font-size: var(--wp--preset--font-size--small); }
+
+/* ---------- Bloque ra/filtro-areas ---------- */
+.ra-filtro__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.ra-filtro__item {
+	display: inline-block;
+	padding: 0.4em 1em;
+	border: 1px solid var(--wp--preset--color--menta);
+	border-radius: 999px;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	font-size: 0.95rem;
+	letter-spacing: 0.5px;
+	color: var(--wp--preset--color--primario);
+	text-decoration: none;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+.ra-filtro__item:hover { background: var(--wp--preset--color--menta); color: var(--wp--preset--color--oscuro); }
+.ra-filtro__item.is-active { background: var(--wp--preset--color--primario); border-color: var(--wp--preset--color--primario); color: #fff; }
+.ra-filtro__count { opacity: 0.7; font-size: 0.85em; }
+
+/* ---------- Cifras ---------- */
+.ra-cifra .ra-cifra__numero {
+	font-family: var(--wp--preset--font-family--montserrat);
+	font-weight: 600;
+	line-height: 1;
+}
+
+/* ---------- Accesibilidad ---------- */
+:where(a, button, .wp-element-button):focus-visible {
+	outline: 2px solid var(--wp--preset--color--acento);
+	outline-offset: 2px;
+}
+
+/* ---------- Ajustes de flujo ---------- */
+/* Sin hueco entre el contenido y el pie (el blockGap raíz lo añadía). */
+.wp-site-blocks > footer,
+.wp-site-blocks > main + * { margin-block-start: 0; }
+/* Secciones a ancho completo seguidas (patrones del inicio) van pegadas. */
+.wp-block-post-content > .alignfull + .alignfull { margin-block-start: 0; }

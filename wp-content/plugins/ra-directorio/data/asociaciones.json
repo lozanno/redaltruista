@@ -1,0 +1,244 @@
+[
+  {
+    "nombre": "Impulso de Águila",
+    "logo": "LOGO-IMPULSO-DE-AGUILA.jpg",
+    "descripcion": "Campañas de ayuda comunitaria ante desastres naturales, salud o contingencias sociales, así como apoyos económicos y en especie para asociaciones Civiles sin fines de lucro a través de la venta de mobiliario y artículos donados.",
+    "areas": ["asistencia-comunitaria"],
+    "ra_facebook": "https://www.facebook.com/bazar.impulsodeaguila/"
+  },
+  {
+    "nombre": "Pasitos de Luz Mamás Unidas para la Rehabilitación de sus Hijos A.C.",
+    "logo": "LOGO-PASITOS-DE-LUZ-MAMAS-UNIDAS-PARA-LA-REABILITACIÓN-DE-SUS-HIJOS-A.C..jpg",
+    "descripcion": "Servicios de rehabilitación física, educación especial, nutrición, integración para niños con necesidades especiales",
+    "areas": ["discapacidad", "ninez", "salud"],
+    "ra_web": "https://pasitosdeluz.org/",
+    "ra_facebook": "https://www.facebook.com/pasitosdeluz2/",
+    "ra_instagram": "https://www.instagram.com/pasitosdeluz/"
+  },
+  {
+    "nombre": "Fundación Asistencial para Personas con Síndrome de Down A.C.",
+    "logo": "LOGO-FUNDACION-ASISTENCIAL-PARA-PERSONAS-CON-SINDROME-DE-DOWN-A.C.-CON-NOMBRE.jpeg",
+    "descripcion": "Programas integrales para niños y jóvenes con síndrome Down y sus familias.",
+    "areas": ["discapacidad", "ninez"],
+    "ra_web": "https://downvallarta.com",
+    "ra_facebook": "https://www.facebook.com/fundaciondownvallarta/"
+  },
+  {
+    "nombre": "Becas Vallarta A.C.",
+    "logo": "LOGO-BECAS-VALLARTA-A.C..png",
+    "descripcion": "Provee de becas a estudiantes de bajos recursos con excelencia académica en Puerto Vallarta.",
+    "areas": ["educacion"],
+    "ra_web": "https://www.becasvallartaac.org/en/start/",
+    "ra_facebook": "https://www.facebook.com/BecasVallartaACO/",
+    "ra_instagram": "https://www.instagram.com/becasvallartaac/"
+  },
+  {
+    "nombre": "Asociación Femenil Vallartense A.C.",
+    "logo": "LOGO-ASOCIACION-FEMENIL-VALLARTENSE-A.C..jpg",
+    "descripcion": "Programa CANICA, apoyos para el tratamiento para niños y jóvenes con cáncer",
+    "areas": ["salud", "ninez"],
+    "ra_web": "https://canica.org.mx/puertovallarta",
+    "ra_facebook": "https://www.facebook.com/CANICAPUERTOVALLARTA",
+    "ra_instagram": "https://www.instagram.com/pvcanica/",
+    "ra_x": "https://x.com/PvCanica"
+  },
+  {
+    "nombre": "Ángeles en Libertad",
+    "logo": "angeles-en-libertad.jpg",
+    "descripcion": "Apoyo a personas en situación de urgencia médica y hemodialis con estudios, medicamentos, consultas médicas de especialidades mediante el ingreso obtenido de la recolección de taparroscas y reciclado de papel y cartón",
+    "areas": ["salud"],
+    "ra_facebook": "https://www.facebook.com/angelesenlibertadpv",
+    "ra_instagram": "https://www.instagram.com/pvangeles.enlibertad"
+  },
+  {
+    "nombre": "Vallarta Cares",
+    "logo": "Imagen-de-WhatsApp-2024-03-07-a-las-16.01.38_324b12db.jpg",
+    "descripcion": "Vallarta Cares es una organización humanitaria dedicada a brindar alimentos, agua potable y dignidad a quienes lo necesitan en Puerto Vallarta y sus alrededores.",
+    "areas": ["asistencia-comunitaria"],
+    "ra_web": "https://vallartacares.org/",
+    "ra_facebook": "https://www.facebook.com/vallartacares/",
+    "ra_instagram": "https://www.instagram.com/vallartacarespv/"
+  },
+  {
+    "nombre": "Clínica Santa Bárbara A.C.",
+    "logo": "LOGO-CLINICA-SANTA-BARBARA-A.C..jpg",
+    "descripcion": "Brindar consultas y terapias de rehabilitación física y de lenguaje para niños y adultos de escasos recursos.",
+    "areas": ["salud", "discapacidad"],
+    "ra_web": "https://rehabsantabarbara.com.mx/",
+    "ra_facebook": "https://www.facebook.com/clinicarehabilitacionvallartasantabarbara"
+  },
+  {
+    "nombre": "ECOBAC",
+    "logo": "ECOBAC_colorSin-fondo.png",
+    "descripcion": "Investigación, protección, conservación de los recursos de los recursos marinos de México, en especial de Bahía de Banderas y ballenas jorobadas. Coordina la red de asistencia a ballenas enmalladas a nivel nacional RABEN",
+    "areas": ["medio-ambiente"],
+    "ra_web": "https://ecobac.org/",
+    "ra_facebook": "https://www.facebook.com/EcologiayConservaciondeBallenas/",
+    "ra_instagram": "https://www.instagram.com/ecologiayconservacionballenas/",
+    "ra_tiktok": "https://www.tiktok.com/@ecobac.org",
+    "ra_youtube": "https://www.youtube.com/channel/UCHE_5YmDuMqB9LWIZGS9NXQ"
+  },
+  {
+    "nombre": "El Recreo Terapias Educativas A.C.",
+    "logo": "LOGO-EL-RECREO-TERAPIAS-EDUCATIVAS-A.C..jpg",
+    "descripcion": "Atiende la discapacidad intelectual, autismo, dificultada severa de aprendizaje, trastornos de lenguaje, déficit de atención con hiperactividad e impulsividad y problemas de conducta en niños de bajos recursos.",
+    "areas": ["discapacidad", "ninez", "educacion"],
+    "ra_web": "https://www.elrecreoterapias.org/",
+    "ra_facebook": "https://www.facebook.com/p/El-Recreo-Terapias-Educativas-A-C-100054567394294/"
+  },
+  {
+    "nombre": "EDIN",
+    "logo": "LOGO-EDIN.jpg",
+    "descripcion": "Brinda educación para mejorar la calidad de vida de personas con capacidades diferentes, capacitación para el empleo.",
+    "areas": ["discapacidad", "educacion"],
+    "ra_web": "https://edinvallarta.org/",
+    "ra_facebook": "https://www.facebook.com/FUNDACIONEDIN",
+    "ra_instagram": "https://www.instagram.com/fundacionedin"
+  },
+  {
+    "nombre": "GRIMMA",
+    "logo": "logoGRIMMA.jpg",
+    "descripcion": "Promover el estudio, la protección y conservación de los mamíferos marinos y otras especies de los ecosistemas marinos y costeros, mediante proyectos de investigación con alto sentido de responsabilidad social y ambiental, para favorecer el desarrollo sostenible del Pacífico Centro mexicano, mediante alianzas y convenios con distintas instituciones.",
+    "areas": ["medio-ambiente"],
+    "ra_web": "https://grimma-ac.org/",
+    "ra_facebook": "https://www.facebook.com/GRIMMA.ORG"
+  },
+  {
+    "nombre": "Ayudemos a Vallarta",
+    "logo": "ayudemos_a_vallarta.jpg",
+    "descripcion": "Brinda consultas de apoyo físico, emocional y mental a las personas a través de diferentes técnicas terapéuticas y holísticas.",
+    "areas": ["salud"],
+    "ra_web": "https://ayudemosavallarta.com",
+    "ra_facebook": "https://www.facebook.com/ayudemosavallarta.ac/",
+    "ra_instagram": "https://www.instagram.com/ayudemosavallarta/"
+  },
+  {
+    "nombre": "Fundación Marival",
+    "logo": "LOGO-FUNDACION-MARIVAL.jpeg",
+    "descripcion": "Realiza acciones que benefician a la sociedad, facilitando el acceso a las necesidades básicas, educación y salud que les permita un desarrollo integral tangible y duradero.",
+    "areas": ["asistencia-comunitaria", "educacion", "salud"],
+    "ra_web": "https://fundacionmarival.org",
+    "ra_facebook": "https://www.facebook.com/fundacionpietrorizzuto",
+    "ra_instagram": "https://www.instagram.com/fundacionpietrorizzuto"
+  },
+  {
+    "nombre": "Asilo Padre Aldana",
+    "logo": "LOGO-ASILO-PADRE-ALDANA.jpeg",
+    "descripcion": "Casa de descanso para Adultos Mayores",
+    "areas": ["adultos-mayores"],
+    "ra_web": "https://asilopadrealdana.org/",
+    "ra_facebook": "https://www.facebook.com/asilopadrealdana/",
+    "ra_instagram": "https://www.instagram.com/asilopadrealdana/"
+  },
+  {
+    "nombre": "CEMBAB",
+    "logo": "LOGO-CEMBAB.jpg",
+    "descripcion": "Desarrolla proyectos de conservación de flora, fauna y cuidado de especies en peligro de extinción en Puerto Vallarta en especial de guacamayas militares y tortugas, programas para hoteles y refugio para aves.",
+    "areas": ["medio-ambiente"],
+    "ra_facebook": "https://www.facebook.com/conservaciondeespeciesmaravillosas"
+  },
+  {
+    "nombre": "Red de Apoyo por la Salud Mental A.C.",
+    "logo": "LOGO-RED-DE-APOYO-PARA-LA-SALUD-MENTAL.png",
+    "descripcion": "Red de Apoyo por la Salud Mental A.C. es una organización sin fines de lucro que representa y apoya a pacientes con trastornos mentales y a sus familiares, a través de asistencia social y difusión, buscando mejorar su calidad de vida.",
+    "areas": ["salud"],
+    "ra_web": "https://www.redsaludmental.org/",
+    "ra_facebook": "https://www.facebook.com/redsaludmentalmexico",
+    "ra_instagram": "https://www.instagram.com/redsaludmentalmexico/",
+    "ra_tiktok": "https://www.tiktok.com/@redsaludmentalmexico"
+  },
+  {
+    "nombre": "Rotary Puerto Vallarta Sur",
+    "logo": "LOGO-ROTARY-Puerto-Vallarta-Sur.jpg",
+    "descripcion": "Apoyo a proyectos que proporcionan agua potable limpia a familias de comunidades y becas educativas que impulsen el desarrollo y bienestar de personas necesitadas.",
+    "areas": ["asistencia-comunitaria", "educacion"],
+    "ra_web": "https://www.rotarypvrsur.com/",
+    "ra_facebook": "https://www.facebook.com/clubrotariopuertovallartasur/"
+  },
+  {
+    "nombre": "Biblioteca Los Mangos",
+    "logo": "LOGO-BIBLIOTECA-LOS-MANGOS.jpg",
+    "descripcion": "Se dedica a contener, incrementar y poner a disposición de la población, un acervo bibliográfico de interés general, fomentar la lectura y ofrecer actividades educativas, expresiones culturales, como vía indispensable para el aprendizaje y el desarrollo comunitario.",
+    "areas": ["educacion"],
+    "ra_web": "https://www.bibliotecalosmangos.org/",
+    "ra_facebook": "https://www.facebook.com/biblioteca.losmangos",
+    "ra_instagram": "https://www.instagram.com/bibliotecalosmangos/"
+  },
+  {
+    "nombre": "Estudiantes Conservando la Naturaleza",
+    "logo": "LOGO-ESTUDIANTES-CONSERVANDO-LA-NATURALEZA.jpg",
+    "descripcion": "Promueve conocimiento y la conservación de las tortugas continentales de México, así como la igualdad de oportunidades de desarrollo para los jóvenes en desventaja.",
+    "areas": ["medio-ambiente", "educacion"],
+    "ra_web": "https://estudiantescn.org/",
+    "ra_facebook": "https://www.facebook.com/estudiantescn",
+    "ra_instagram": "https://www.instagram.com/estudiantescn/",
+    "ra_youtube": "https://www.youtube.com/@EstudiantesCN"
+  },
+  {
+    "nombre": "Volcanes Project",
+    "logo": "nuevo-logo-volcanes-e1774417877388.jpeg",
+    "descripcion": "Clases extraescolares: inglés, regularización en español (comprensión lectora y matemáticas), música, biblioteca, deporte.",
+    "areas": ["educacion", "ninez"],
+    "ra_web": "https://volcanesproject.com/"
+  },
+  {
+    "nombre": "Desayunos Vallarta",
+    "logo": "logo-desayunos.jpg",
+    "descripcion": "Guarderías para niños y niñas en situación vulnerable y comedores comunitarios.",
+    "areas": ["ninez", "asistencia-comunitaria"],
+    "ra_facebook": "https://www.facebook.com/desayunosvallarta"
+  },
+  {
+    "nombre": "Casa Cultural Mixtli A.C.",
+    "logo": "LOGO.JPG.jpeg",
+    "descripcion": "Comedor comunitario gratuito semanal, campamento de verano, tutorías y coaching familiar",
+    "areas": ["asistencia-comunitaria", "ninez"],
+    "ra_facebook": "https://www.facebook.com/casaculturalmixtliac",
+    "ra_instagram": "https://www.instagram.com/casaculturalmixtliac",
+    "ra_email": "casaculturalmixtli@gmail.com"
+  },
+  {
+    "nombre": "MOVII",
+    "logo": "LOGO-MOVII.png",
+    "descripcion": "COMUNICACIÓN con perspectiva de derechos humanos a través de campañas, eventos, exposiciones y espectáculos; CAPACITACIÓN en materia de igualdad y no discriminación; CABILDEO para incidir en regulaciones y políticas públicas igualitarias, y CONSEJERÍA para escuchar y acompañar a personas en situación de vulnerabilidad.",
+    "areas": ["derechos-humanos"],
+    "ra_web": "https://moviimexico.org/",
+    "ra_facebook": "https://www.facebook.com/moviiMexico",
+    "ra_instagram": "https://www.instagram.com/moviimexico/",
+    "ra_x": "https://x.com/moviimx",
+    "ra_tiktok": "https://www.tiktok.com/@moviimexico"
+  },
+  {
+    "nombre": "Mujer de Luz y Poder",
+    "logo": "mujer-luz_y_poder.jpg",
+    "descripcion": "Abrir canales y espacios de aprendizaje para la creación, desarrollo y crecimiento de negocios a mujeres.",
+    "areas": ["educacion"],
+    "ra_facebook": "https://www.facebook.com/Mujerdeluzypoder/",
+    "ra_instagram": "https://www.instagram.com/mujerdeluzypoder/"
+  },
+  {
+    "nombre": "Anspac",
+    "logo": "logo_anspac.webp",
+    "descripcion": "Promueve la superación integral de la persona, basada en la convicción de que solo quien desarrolla continuamente todo su potencial humano puede ser constructor, en su familia y en su comunidad, de un mundo nuevo y mejor.",
+    "areas": ["educacion"],
+    "ra_facebook": "https://www.facebook.com/people/Anspac-Pto-Vallarta/61558035035233/"
+  },
+  {
+    "nombre": "Vallarta Gay Community Center",
+    "logo": "logo_vallarta_gay.webp",
+    "descripcion": "PrEP, PEP, campañas de Prevención y centro comunitario para comunidad LGBTQ+ clases de inglés, grupos de apoyo",
+    "areas": ["salud", "derechos-humanos"],
+    "ra_web": "https://vallartagaycc.org/",
+    "ra_facebook": "https://www.facebook.com/VallartaGayCommunityCenter/",
+    "ra_instagram": "https://www.instagram.com/vallartagaycc/"
+  },
+  {
+    "nombre": "Refugio Santa Esperanza",
+    "logo": "logo_refugio_santa_esperanza.webp",
+    "descripcion": "Albergue para niñas y niños que carecen de un hogar o que se encuentran en situaciones criticas, a fin de reintegrarlos a un ambiente familiar/social.",
+    "areas": ["ninez"],
+    "ra_web": "https://www.risepv.com/espanol/",
+    "ra_facebook": "https://www.facebook.com/risepv",
+    "ra_instagram": "https://www.instagram.com/risepuertovallarta"
+  }
+]

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ra/filtro-areas",
+	"title": "Filtro por área de servicio",
+	"category": "theme",
+	"icon": "filter",
+	"description": "Botones para filtrar el directorio de asociaciones por área de servicio.",
+	"textdomain": "ra-directorio",
+	"attributes": {
+		"allLabel": {
+			"type": "string",
+			"default": "Todas"
+		},
+		"showCount": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}
