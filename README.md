@@ -87,36 +87,30 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 
 ## Migración a producción (GoDaddy)
 
-El plan no tiene SSH (solo SFTP y Administrador de archivos), así que el cambio se hace desde el admin con **Herramientas → Publicar sitio**, que agrega `bin/publicar.php` como *mu-plugin* (WordPress lo carga solo, sin activarlo). Todo el cambio tarda unos segundos.
+Todo el cambio lo hace `bin/publicar.php` en unos segundos. El plan tiene SSH, así que se corre con WP-CLI; si no hubiera SSH, el mismo archivo funciona desde el admin (más abajo).
 
-1. **Respaldo completo** desde GoDaddy (archivos + base de datos).
+1. **Respaldo completo** desde GoDaddy (archivos + base de datos). Por SSH, además: `wp db export ~/antes-de-publicar.sql`.
 2. **Subir por SFTP** (nada de esto cambia el sitio mientras no se publique):
-
-   | Del repo | A producción |
-   |---|---|
-   | `wp-content/themes/redaltruista/` | `wp-content/themes/redaltruista/` |
-   | `wp-content/plugins/ra-directorio/` | `wp-content/plugins/ra-directorio/` |
-   | `bin/publicar.php` | `wp-content/mu-plugins/publicar.php` |
-   | `bin/formularios.php` | `wp-content/mu-plugins/publicar/formularios.php` |
-   | `medios/` | `wp-content/mu-plugins/publicar/medios/` |
-
-   (Si `wp-content/mu-plugins/` no existe, se crea. GoDaddy puede tener ahí sus propios archivos: no tocarlos.)
-3. En el admin, **Herramientas → Publicar sitio → Simular**: revisa que estén las páginas, patrones, imágenes y el logo, y lista lo que hará. No cambia nada.
-4. **Publicar**. En orden:
-   - activa Contact Form 7, ra-directorio y el tema Red Altruista;
+   - `wp-content/themes/redaltruista/` y `wp-content/plugins/ra-directorio/` a su lugar en `wp-content/`.
+   - `bin/publicar.php`, `bin/formularios.php` y la carpeta `medios/` a una carpeta fuera de WordPress, p. ej. `~/publicar/`.
+3. Por SSH, en la carpeta de WordPress (donde está `wp-config.php`): `wp core version` debe responder 7.1.4.
+4. **Simular**: `wp eval-file ~/publicar/publicar.php simular` — revisa que estén las páginas, patrones, imágenes y el logo, y lista lo que hará. No cambia nada.
+5. **Publicar**: `wp eval-file ~/publicar/publicar.php`. En orden:
+   - activa Contact Form 7, ra-directorio y el tema Red Altruista (los patrones del tema se cargan en un segundo proceso que el script lanza solo);
    - importa las 28 asociaciones (logos de la Biblioteca) y crea el formulario «Contacto» (el de ejemplo de 2017 va a la papelera);
    - pone a cada página el contenido de su patrón, con título, plantilla, página superior, imagen destacada y fecha (el contenido de Avada queda como revisión). La portada actual (`home-2`) recibe Inicio; los eventos pasan debajo de Eventos (las URL viejas redirigen solas) y se sube `encuentro-2024-portada.jpg`;
    - pasa a borrador Programas y Servicios y Registro (sin Avada mostrarían shortcodes) y manda a la papelera la página «Asociaciones Afiliadas» (el directorio ocupa su URL);
    - pone el logo (`Logo-Comercial-small.png`) y desactiva Avada Builder y Avada Core.
 
-   Si algo se interrumpe, se vuelve a pulsar *Publicar*: es idempotente y retoma donde quedó.
-5. **Revisar** el sitio y hacer un envío de prueba en /contactanos/ (debe llegar a `info@redaltruista.org`).
-6. **Borrar por SFTP** `wp-content/mu-plugins/publicar.php` y la carpeta `wp-content/mu-plugins/publicar/`.
-7. **Volver atrás**, si hiciera falta: restaurar el respaldo (o activar Avada y sus plugins: el contenido anterior está en las revisiones de cada página).
+   Es idempotente: si algo se interrumpe, se vuelve a correr el mismo comando y retoma donde quedó.
+6. **Revisar** el sitio y hacer un envío de prueba en /contactanos/ (debe llegar a `info@redaltruista.org`). Después se puede borrar `~/publicar/`.
+7. **Volver atrás**, si hiciera falta: `wp db import ~/antes-de-publicar.sql` y `wp theme activate Avada`, o restaurar el respaldo de GoDaddy.
+
+**Sin SSH (desde el admin):** subir `bin/publicar.php` a `wp-content/mu-plugins/publicar.php` y `bin/formularios.php` y `medios/` a `wp-content/mu-plugins/publicar/`. WordPress lo carga solo (sin activarlo) y aparece **Herramientas → Publicar sitio**, con *Simular* y *Publicar*. Al terminar, borrar ese archivo y esa carpeta.
 
 Akismet está instalado en producción pero inactivo: activarlo si se quiere su filtro antispam en el formulario.
 
-**Ensayo local** sobre una copia exacta de producción (Avada incluido, MySQL de Homebrew): `bin/ensayo.sh` la rehace desde el respaldo, instala los archivos como arriba y la sirve en http://localhost:8081 (usuario de prueba en `local/ensayo/ACCESO.txt`). También se puede correr con `bin/wp-ensayo eval-file bin/publicar.php [simular]`. Ensayado con el respaldo del 30-oct-2026, desde el admin y con WP-CLI: un clic, sin avisos, 577 bloques válidos en las 12 páginas, el formulario envía y repetirlo no duplica nada.
+**Ensayo local** sobre una copia exacta de producción (Avada incluido, MySQL de Homebrew): `bin/ensayo.sh` la rehace desde el respaldo, instala los archivos como arriba y la sirve en http://localhost:8081 (usuario de prueba en `local/ensayo/ACCESO.txt`). Con WP-CLI: `bin/wp-ensayo eval-file bin/publicar.php [simular]`. Ensayado con el respaldo del 30-oct-2026, con WP-CLI (archivos fuera de WordPress, como en producción) y desde el admin: un clic, sin avisos, 577 bloques válidos en las 12 páginas, el formulario envía y repetirlo no duplica nada.
 
 ## Pendientes conocidos
 

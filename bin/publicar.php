@@ -7,7 +7,11 @@
  * crea los formularios, pone a cada página el contenido de su patrón y desactiva Avada.
  * Es idempotente: se puede volver a correr. El contenido de Avada de cada página queda como revisión.
  *
- * Producción (sin SSH), por SFTP:
+ * Producción con SSH: subir este archivo, formularios.php y medios/ a ~/publicar/ y, en la carpeta de WordPress,
+ *   wp eval-file ~/publicar/publicar.php simular
+ *   wp eval-file ~/publicar/publicar.php
+ *
+ * Producción sin SSH, por SFTP:
  *   wp-content/themes/redaltruista, wp-content/plugins/ra-directorio  → a su lugar
  *   bin/publicar.php                                                  → wp-content/mu-plugins/publicar.php
  *   bin/formularios.php y medios/                                     → wp-content/mu-plugins/publicar/
