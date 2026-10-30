@@ -122,6 +122,27 @@ Text Domain:       redaltruista
 	text-align: center;
 }
 
+/* ---------- Línea de tiempo (Transparencia) ---------- */
+.ra-linea {
+	border-left: 3px solid var(--wp--preset--color--menta);
+	padding-left: var(--wp--preset--spacing--60);
+}
+.ra-hito { position: relative; }
+.ra-hito::before {
+	content: "";
+	position: absolute;
+	top: 0.5rem;
+	left: calc(-1 * var(--wp--preset--spacing--60) - 11px);
+	width: 19px;
+	height: 19px;
+	border: 4px solid var(--wp--preset--color--blanco);
+	border-radius: 50%;
+	background: var(--wp--preset--color--primario);
+	box-shadow: 0 0 0 2px var(--wp--preset--color--menta);
+}
+.ra-hito .ra-historia__anio { margin: 0; }
+.ra-hito h3 { margin-top: 0.25rem; }
+
 /* ---------- Página Contribuye ---------- */
 /* Tarjetas con el botón pegado abajo, aunque los textos tengan distinto largo. */
 .ra-accion { display: flex; flex-direction: column; }

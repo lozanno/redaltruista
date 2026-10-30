@@ -63,7 +63,7 @@ $ra_consejo = array(
 		'bio'    => array(
 			'Forma parte del Consejo Directivo de la Red desde 2023. Contador egresado del IPN con maestría en Negocios por la Universidad de Texas en Austin y el Tec de Monterrey.',
 			'Es socio director de BNI Jalisco Oeste, fundador de Strategic Coaching and Consulting Group y director de Transworld Business Advisors.',
-			'Ex presidente del Colegio de Contadores Públicos de Puerto Vallarta, aporta su liderazgo y experiencia empresarial construir una comunidad más justa y próspera.',
+			'Expresidente del Colegio de Contadores Públicos de Puerto Vallarta, aporta su liderazgo y experiencia empresarial para construir una comunidad más justa y próspera.',
 		),
 	),
 	array(
@@ -73,11 +73,11 @@ $ra_consejo = array(
 		'bio'    => array( 'Forma parte del Consejo Directivo de la Red desde 2025.' ),
 		'lista'  => array(
 			'Master Coach Internacional de Negocios (AIAC).',
-			'Consultor de Negocios con soluciones en MKT.',
+			'Consultora de negocios con soluciones en MKT.',
 			'CEO ME2BE GROUP.',
 			'Miembro Red Mundial de Comunicación Organizacional.',
 			'Vicepresidenta de Coparmex Puerto Vallarta, miembro del consejo 2023 - 2025.',
-			'Best Seller primera, segunda y Tercera Antología de Expertos ETP.',
+			'Best Seller de la primera, segunda y tercera Antología de Expertos ETP.',
 		),
 	),
 	array(
