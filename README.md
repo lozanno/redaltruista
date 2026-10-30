@@ -94,7 +94,7 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 4. Mandar la página antigua "Asociaciones Afiliadas" a la papelera (el directorio nuevo ocupa esa URL).
 5. Rehacer las páginas institucionales con bloques y patrones (en un staging o como borradores).
    - **Eventos**: cada evento es una página hija de Eventos con imagen destacada, y la cuadrícula se arma sola (orden por fecha de publicación). En producción, a Diplomado 2019 y a los Encuentros 2017, 2018, 2019, 2023 y 2024 asígnales *Superior: Eventos* e imagen destacada (`diplomado_2019-1.jpg`, `1erEncuentro_2017.jpg`, `2erEncuentro_2018.jpg`, `3erEncuentro_2019.jpg`, `evento-2023.jpg`, `evento-2024.jpg`), y a Encuentro 2017 la fecha 2017-09-01 para que quede en orden. Las URL viejas (`/encuentro-2024/`) redirigen solas a `/eventos/encuentro-2024/`.
-6. Activar el tema **Red Altruista**. En el Editor del sitio, asignar el logo (bloque Logo del sitio).
+6. Activar el tema **Red Altruista**. En el Editor del sitio, asignar el logo (bloque Logo del sitio): `Logo-Comercial-small.png` ("LA RED Altruista", el logo principal que usa Avada hoy). `logo-red-altruismo-color.png` es el diseño anterior y no se usa.
 7. Desactivar Avada y Avada Builder/Core. Revisar menú, formularios y URLs.
 8. Formularios: Contact Form 7 ya está instalado en producción. Crear los del sitio con `bin/formularios.php` y borrar el formulario de ejemplo de 2017 ("Contact form 1", en inglés y con envío a un correo personal). Hacer un envío de prueba para confirmar que llegan a `info@redaltruista.org`.
 
