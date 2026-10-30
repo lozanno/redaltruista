@@ -55,10 +55,9 @@ Los formularios se definen en `bin/formularios.php` (campos, correo y mensajes e
 
 ```bash
 bin/wp eval-file bin/formularios.php      # local
-wp eval-file formularios.php              # producción, si hay WP-CLI
 ```
 
-Sin WP-CLI, se pueden capturar a mano en **Contacto → Formularios** copiando los campos del archivo. Los patrones de página buscan cada formulario por su título ("Contacto").
+En producción (sin WP-CLI) los crea **Herramientas → Publicar sitio** (ver Migración a producción); después, un formulario nuevo se agrega a este archivo y se vuelve a pulsar *Publicar* (es idempotente), o se captura a mano en **Contacto → Formularios**. Los patrones de página buscan cada formulario por su título ("Contacto").
 Todos los correos van a `info@redaltruista.org`, el correo oficial.
 
 En local, `local/wp/wp-content/mu-plugins/ra-correo-local.php` no envía correos: los escribe en `local/wp/wp-content/debug.log`.
@@ -88,25 +87,36 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 
 ## Migración a producción (GoDaddy)
 
-Todo el cambio lo hace `bin/publicar.php` en una sola corrida (≈1 s), con WP-CLI por SSH:
+El plan no tiene SSH (solo SFTP y Administrador de archivos), así que el cambio se hace desde el admin con **Herramientas → Publicar sitio**, que agrega `bin/publicar.php` como *mu-plugin* (WordPress lo carga solo, sin activarlo). Todo el cambio tarda unos segundos.
 
 1. **Respaldo completo** desde GoDaddy (archivos + base de datos).
-2. **Subir por SFTP** (no cambia nada del sitio mientras no se active):
-   - `wp-content/themes/redaltruista` y `wp-content/plugins/ra-directorio` a su lugar en `wp-content/`.
-   - `bin/publicar.php`, `bin/formularios.php` y la carpeta `medios/` a una misma carpeta, p. ej. `~/publicar/`.
-3. **Simular**: `wp eval-file ~/publicar/publicar.php simular` — revisa que estén las páginas, patrones, imágenes y el logo, y lista lo que hará.
-4. **Publicar**: `wp eval-file ~/publicar/publicar.php`. En orden:
+2. **Subir por SFTP** (nada de esto cambia el sitio mientras no se publique):
+
+   | Del repo | A producción |
+   |---|---|
+   | `wp-content/themes/redaltruista/` | `wp-content/themes/redaltruista/` |
+   | `wp-content/plugins/ra-directorio/` | `wp-content/plugins/ra-directorio/` |
+   | `bin/publicar.php` | `wp-content/mu-plugins/publicar.php` |
+   | `bin/formularios.php` | `wp-content/mu-plugins/publicar/formularios.php` |
+   | `medios/` | `wp-content/mu-plugins/publicar/medios/` |
+
+   (Si `wp-content/mu-plugins/` no existe, se crea. GoDaddy puede tener ahí sus propios archivos: no tocarlos.)
+3. En el admin, **Herramientas → Publicar sitio → Simular**: revisa que estén las páginas, patrones, imágenes y el logo, y lista lo que hará. No cambia nada.
+4. **Publicar**. En orden:
    - activa Contact Form 7, ra-directorio y el tema Red Altruista;
    - importa las 28 asociaciones (logos de la Biblioteca) y crea el formulario «Contacto» (el de ejemplo de 2017 va a la papelera);
    - pone a cada página el contenido de su patrón, con título, plantilla, página superior, imagen destacada y fecha (el contenido de Avada queda como revisión). La portada actual (`home-2`) recibe Inicio; los eventos pasan debajo de Eventos (las URL viejas redirigen solas) y se sube `encuentro-2024-portada.jpg`;
    - pasa a borrador Programas y Servicios y Registro (sin Avada mostrarían shortcodes) y manda a la papelera la página «Asociaciones Afiliadas» (el directorio ocupa su URL);
    - pone el logo (`Logo-Comercial-small.png`) y desactiva Avada Builder y Avada Core.
+
+   Si algo se interrumpe, se vuelve a pulsar *Publicar*: es idempotente y retoma donde quedó.
 5. **Revisar** el sitio y hacer un envío de prueba en /contactanos/ (debe llegar a `info@redaltruista.org`).
-6. **Volver atrás**, si hiciera falta: restaurar el respaldo (o activar Avada y sus plugins: el contenido anterior está en las revisiones de cada página).
+6. **Borrar por SFTP** `wp-content/mu-plugins/publicar.php` y la carpeta `wp-content/mu-plugins/publicar/`.
+7. **Volver atrás**, si hiciera falta: restaurar el respaldo (o activar Avada y sus plugins: el contenido anterior está en las revisiones de cada página).
 
-Es idempotente: si algo falla a medias, se corrige y se vuelve a correr. Las páginas y adjuntos se buscan por slug y por ID (los mismos que en producción).
+Akismet está instalado en producción pero inactivo: activarlo si se quiere su filtro antispam en el formulario.
 
-**Ensayo local** sobre una copia exacta de producción (Avada incluido, MySQL de Homebrew): `bin/ensayo.sh` la rehace desde el respaldo y la sirve en http://localhost:8081; luego `bin/wp-ensayo eval-file bin/publicar.php`. Ensayado con el respaldo del 30-oct-2026: sin avisos, todas las páginas responden, el formulario envía.
+**Ensayo local** sobre una copia exacta de producción (Avada incluido, MySQL de Homebrew): `bin/ensayo.sh` la rehace desde el respaldo, instala los archivos como arriba y la sirve en http://localhost:8081 (usuario de prueba en `local/ensayo/ACCESO.txt`). También se puede correr con `bin/wp-ensayo eval-file bin/publicar.php [simular]`. Ensayado con el respaldo del 30-oct-2026, desde el admin y con WP-CLI: un clic, sin avisos, 577 bloques válidos en las 12 páginas, el formulario envía y repetirlo no duplica nada.
 
 ## Pendientes conocidos
 

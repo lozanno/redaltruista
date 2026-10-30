@@ -4,7 +4,8 @@
 #   bin/ensayo.sh            Rehace local/ensayo desde el respaldo de GoDaddy y lo sirve en http://localhost:8081
 #   bin/ensayo.sh servir     Solo lo sirve (sin rehacerlo)
 #
-# Luego, en otra terminal, se ensaya igual que en producción:
+# Queda instalado como en producción (mu-plugins/publicar.php): se ensaya en el admin,
+# Herramientas → Publicar sitio (usuario en local/ensayo/ACCESO.txt), o con WP-CLI:
 #   bin/wp-ensayo eval-file bin/publicar.php simular
 #   bin/wp-ensayo eval-file bin/publicar.php
 #
@@ -31,9 +32,13 @@ if [ "$1" != "servir" ]; then
   mkdir -p "$E/wp-content/mu-plugins"
   cp "$ROOT/local/wp/wp-content/mu-plugins/ra-correo-local.php" "$E/wp-content/mu-plugins/" # no manda correos
 
-  # Lo que se sube por SFTP.
+  # Lo que se sube por SFTP (igual que en producción, ver README → Migración a producción).
   rsync -a "$ROOT/wp-content/themes/redaltruista" "$E/wp-content/themes/"
   rsync -a "$ROOT/wp-content/plugins/ra-directorio" "$E/wp-content/plugins/"
+  cp "$ROOT/bin/publicar.php" "$E/wp-content/mu-plugins/publicar.php"
+  mkdir -p "$E/wp-content/mu-plugins/publicar"
+  cp "$ROOT/bin/formularios.php" "$E/wp-content/mu-plugins/publicar/"
+  rsync -a "$ROOT/medios" "$E/wp-content/mu-plugins/publicar/"
 
   cat > "$E/wp-config.php" <<PHP
 <?php
@@ -59,7 +64,11 @@ PHP
   { echo "SET SESSION sql_mode = '';"; cat "$SQL"; } | mysql -uroot "$DB" # el volcado trae fechas 0000-00-00
   "$ROOT/bin/wp-ensayo" search-replace 'https://redaltruista.org' "$URL" --all-tables-with-prefix --skip-columns=guid --quiet 2>/dev/null
   "$ROOT/bin/wp-ensayo" search-replace 'http://redaltruista.org' "$URL" --all-tables-with-prefix --skip-columns=guid --quiet 2>/dev/null
-  echo "Copia de producción lista en $E"
+  # Administrador de prueba, solo en esta copia (la contraseña queda en local/ensayo/ACCESO.txt, no versionado).
+  CLAVE="$(openssl rand -hex 12)"
+  "$ROOT/bin/wp-ensayo" user create ensayo ensayo@example.test --role=administrator --user_pass="$CLAVE" --quiet 2>/dev/null
+  printf 'Admin del ensayo: %s/wp-admin  ·  usuario: ensayo  ·  contraseña: %s\n' "$URL" "$CLAVE" > "$E/ACCESO.txt"
+  echo "Copia de producción lista en $E  (acceso al admin en local/ensayo/ACCESO.txt)"
 fi
 
 echo "Ensayo: $URL   (Ctrl+C para detenerlo)"
