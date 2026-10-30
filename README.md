@@ -49,6 +49,20 @@ Es idempotente: las asociaciones que ya existen se omiten (usa `--update` para s
 
 Las **áreas asignadas a cada asociación son una propuesta inicial**: hay que validarlas con el cliente.
 
+## Formularios (Contact Form 7)
+
+Los formularios se definen en `bin/formularios.php` (campos, correo y mensajes en español) y se crean o actualizan con:
+
+```bash
+bin/wp eval-file bin/formularios.php      # local
+wp eval-file formularios.php              # producción, si hay WP-CLI
+```
+
+Sin WP-CLI, se pueden capturar a mano en **Contacto → Formularios** copiando los campos del archivo. Los patrones de página buscan cada formulario por su título ("Contacto").
+Todos los correos van a `info@redaltruista.org`, el correo oficial.
+
+En local, `local/wp/wp-content/mu-plugins/ra-correo-local.php` no envía correos: los escribe en `local/wp/wp-content/debug.log`.
+
 ## Desarrollo local (el plan de GoDaddy no tiene staging)
 
 `local/` contiene un WordPress 7.1.4 (la misma versión que producción) con base de datos SQLite: no necesita MySQL, Docker ni LocalWP, solo PHP.
@@ -82,9 +96,9 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
    - **Eventos**: cada evento es una página hija de Eventos con imagen destacada, y la cuadrícula se arma sola (orden por fecha de publicación). En producción, a Diplomado 2019 y a los Encuentros 2017, 2018, 2019, 2023 y 2024 asígnales *Superior: Eventos* e imagen destacada (`diplomado_2019-1.jpg`, `1erEncuentro_2017.jpg`, `2erEncuentro_2018.jpg`, `3erEncuentro_2019.jpg`, `evento-2023.jpg`, `evento-2024.jpg`), y a Encuentro 2017 la fecha 2017-09-01 para que quede en orden. Las URL viejas (`/encuentro-2024/`) redirigen solas a `/eventos/encuentro-2024/`.
 6. Activar el tema **Red Altruista**. En el Editor del sitio, asignar el logo (bloque Logo del sitio).
 7. Desactivar Avada y Avada Builder/Core. Revisar menú, formularios y URLs.
+8. Formularios: Contact Form 7 ya está instalado en producción. Crear los del sitio con `bin/formularios.php` y borrar el formulario de ejemplo de 2017 ("Contact form 1", en inglés y con envío a un correo personal). Hacer un envío de prueba para confirmar que llegan a `info@redaltruista.org`.
 
 ## Pendientes conocidos
 
-- El correo del pie en el sitio actual enlaza a `info@redaltruista.com`, pero el texto dice `.org`. El tema usa `.org`: confirmar con el cliente.
 - Las cifras de voluntarios y proyectos (patrón "Cifras") quedan como `XX` hasta que el cliente dé los números.
-- Formularios "Registro – Asociación" y "Constituirse": falta elegir plugin (Contact Form 7 / Fluent Forms) y reemplazarlos.
+- Formularios "Registro – Asociación" y "Constituirse": agregarlos a `bin/formularios.php` (Contact Form 7) y enlazarlos desde el llamado "Afilia tu asociación".

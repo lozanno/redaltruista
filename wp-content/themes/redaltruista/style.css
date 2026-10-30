@@ -173,6 +173,52 @@ Text Domain:       redaltruista
 }
 .ra-evento .wp-block-read-more:hover { color: var(--wp--preset--color--acento); }
 
+/* ---------- Formularios (Contact Form 7) ---------- */
+.wpcf7 label {
+	display: block;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	letter-spacing: 0.5px;
+	color: var(--wp--preset--color--oscuro);
+}
+.wpcf7 :is(input[type="text"], input[type="email"], input[type="tel"], select, textarea) {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 0.35rem;
+	padding: 0.7rem 0.9rem;
+	border: 1px solid var(--wp--preset--color--menta);
+	border-radius: 4px;
+	background: var(--wp--preset--color--blanco);
+	font: inherit;
+	font-family: var(--wp--preset--font-family--raleway);
+	color: var(--wp--preset--color--texto);
+}
+.wpcf7 textarea { min-height: 10rem; resize: vertical; }
+.wpcf7 :is(input, select, textarea):focus {
+	outline: 2px solid var(--wp--preset--color--acento);
+	outline-offset: 0;
+	border-color: transparent;
+}
+.wpcf7 input[type="submit"] {
+	padding: 0.9rem 2rem;
+	border: 0;
+	border-radius: 2px;
+	background: var(--wp--preset--color--primario);
+	color: var(--wp--preset--color--blanco);
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.wpcf7 input[type="submit"]:hover { background: var(--wp--preset--color--acento); }
+.wpcf7 .wpcf7-not-valid { border-color: var(--wp--preset--color--coral); }
+.wpcf7 .wpcf7-not-valid-tip { color: var(--wp--preset--color--coral); font-size: var(--wp--preset--font-size--small); }
+.wpcf7 form .wpcf7-response-output {
+	margin: 1.5rem 0 0;
+	padding: 0.75rem 1rem;
+	border-radius: 4px;
+	background: var(--wp--preset--color--blanco);
+}
+
 /* ---------- Accesibilidad ---------- */
 :where(a, button, .wp-element-button):focus-visible {
 	outline: 2px solid var(--wp--preset--color--acento);
