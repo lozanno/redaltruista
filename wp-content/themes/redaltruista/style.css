@@ -138,6 +138,20 @@ Text Domain:       redaltruista
 	border: 0;
 }
 
+/* ---------- Página Eventos ---------- */
+.ra-evento { overflow: hidden; }
+.ra-evento .wp-block-post-featured-image img { border-radius: 0; }
+.ra-evento .wp-block-read-more {
+	margin-top: auto;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--wp--preset--color--primario);
+}
+.ra-evento .wp-block-read-more:hover { color: var(--wp--preset--color--acento); }
+
 /* ---------- Accesibilidad ---------- */
 :where(a, button, .wp-element-button):focus-visible {
 	outline: 2px solid var(--wp--preset--color--acento);

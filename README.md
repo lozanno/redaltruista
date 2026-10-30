@@ -79,6 +79,7 @@ La base de datos vive en `local/wp/wp-content/database/`; para empezar de cero, 
 3. Activar **ra-directorio** → Asociaciones → Importar.
 4. Mandar la página antigua "Asociaciones Afiliadas" a la papelera (el directorio nuevo ocupa esa URL).
 5. Rehacer las páginas institucionales con bloques y patrones (en un staging o como borradores).
+   - **Eventos**: cada evento es una página hija de Eventos con imagen destacada, y la cuadrícula se arma sola (orden por fecha de publicación). En producción, a Diplomado 2019 y a los Encuentros 2017, 2018, 2019, 2023 y 2024 asígnales *Superior: Eventos* e imagen destacada (`diplomado_2019-1.jpg`, `1erEncuentro_2017.jpg`, `2erEncuentro_2018.jpg`, `3erEncuentro_2019.jpg`, `evento-2023.jpg`, `evento-2024.jpg`), y a Encuentro 2017 la fecha 2017-09-01 para que quede en orden. Las URL viejas (`/encuentro-2024/`) redirigen solas a `/eventos/encuentro-2024/`.
 6. Activar el tema **Red Altruista**. En el Editor del sitio, asignar el logo (bloque Logo del sitio).
 7. Desactivar Avada y Avada Builder/Core. Revisar menú, formularios y URLs.
 
