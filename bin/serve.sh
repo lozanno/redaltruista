@@ -23,4 +23,4 @@ link ../../../../wp-content/plugins/ra-directorio "$WPC/plugins/ra-directorio"
 
 cd "$ROOT/local/wp"
 echo "WordPress local: http://localhost:8080   ·   Admin: http://localhost:8080/wp-admin  (admin / admin)"
-exec php -S localhost:8080 -t .
+exec php -S localhost:8080 -t . "$ROOT/bin/router.php"
