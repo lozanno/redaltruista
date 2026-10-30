@@ -114,6 +114,32 @@ Text Domain:       redaltruista
 }
 .ra-persona .wp-block-details[open] summary { margin-bottom: 1rem; }
 
+/* ---------- Páginas de eventos (inc/eventos.php) ---------- */
+.ra-evento-datos { list-style: none; padding: 0; }
+.ra-evento-datos li { margin-bottom: 0.35rem; }
+.ra-programa table { border-collapse: collapse; background: var(--wp--preset--color--blanco); }
+.ra-programa th,
+.ra-programa td {
+	padding: 0.75rem 1rem;
+	border: 1px solid #dfe9e9;
+	vertical-align: top;
+	text-align: left;
+}
+.ra-programa th {
+	background: var(--wp--preset--color--primario);
+	color: #fff;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.ra-programa td:first-child {
+	white-space: nowrap;
+	color: var(--wp--preset--color--primario);
+	font-weight: 600;
+}
+.ra-persona .ra-persona__org { margin-top: 0.25rem; }
+
 /* ---------- Página Sobre nosotros ---------- */
 .ra-historia__anio { line-height: 1; font-weight: 600; }
 .ra-lista-simple {

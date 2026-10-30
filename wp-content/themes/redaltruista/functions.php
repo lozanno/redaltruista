@@ -7,6 +7,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+require_once __DIR__ . '/inc/eventos.php';
+
 /** Soportes del tema. */
 add_action(
 	'after_setup_theme',
