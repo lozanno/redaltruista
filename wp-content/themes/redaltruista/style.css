@@ -92,6 +92,36 @@ Text Domain:       redaltruista
 	line-height: 1;
 }
 
+/* ---------- Tarjeta de persona (patrón redaltruista/persona) ---------- */
+.ra-persona { height: 100%; }
+.ra-persona__foto img {
+	width: 160px;
+	height: 160px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.ra-persona .ra-persona__cargo {
+	margin-top: 0.25rem;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.ra-persona .wp-block-details summary {
+	text-align: center;
+	cursor: pointer;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	color: var(--wp--preset--color--primario);
+}
+.ra-persona .wp-block-details[open] summary { margin-bottom: 1rem; }
+
+/* ---------- Página Sobre nosotros ---------- */
+.ra-historia__anio { line-height: 1; font-weight: 600; }
+.ra-lista-simple {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
 /* ---------- Accesibilidad ---------- */
 :where(a, button, .wp-element-button):focus-visible {
 	outline: 2px solid var(--wp--preset--color--acento);
@@ -104,3 +134,5 @@ Text Domain:       redaltruista
 .wp-site-blocks > main + * { margin-block-start: 0; }
 /* Secciones a ancho completo seguidas (patrones del inicio) van pegadas. */
 .wp-block-post-content > .alignfull + .alignfull { margin-block-start: 0; }
+/* Si la página termina en una sección a ancho completo, va pegada al pie (page.html deja padding abajo). */
+.wp-block-post-content:has(> .alignfull:last-child) { padding-bottom: 0 !important; }

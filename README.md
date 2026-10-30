@@ -15,7 +15,8 @@ wp-content/
   - Montserrat (títulos), Raleway (texto) y Roboto Condensed (menú y botones), servidas desde el propio tema (`assets/fonts`, sin Google Fonts).
 - **Plantillas**: `page` (con banda de título), `page-sin-titulo` (ancho completo, para Inicio y páginas armadas con secciones), `archive-asociacion` (directorio), `taxonomy-area-servicio`, `single-asociacion`, `single`, `index`, `404`.
 - **Partes**: `header` (logo, menú, botones Voluntario/Dona) y `footer` (acerca de, contacto, redes).
-- **Patrones** (insertador → Red Altruista): portada, nuestros programas (ancla `#programas`), cifras, llamado a afiliarse.
+- **Patrones** (insertador → Red Altruista): portada, nuestros programas (ancla `#programas`), cifras, llamado a afiliarse, tarjeta de persona.
+- **Patrones de página** (`patterns/pagina-*.php`): contenido completo de cada página institucional. Al crear o editar la página en producción, elige el patrón (p. ej. "Página – Sobre nosotros" para `/acerca-de/`, con la plantilla Página).
 
 ## Plugin `ra-directorio`
 
@@ -27,6 +28,7 @@ wp-content/
 - **Áreas de servicio** (taxonomía con casillas): salud, educación, niñez, adultos mayores, discapacidad, asistencia comunitaria, derechos humanos, medio ambiente.
 - Caja **Enlaces y redes sociales**: sitio web, Facebook, Instagram, X, TikTok, YouTube, correo y teléfono. Solo se muestra lo que tenga valor. Acepta dominios sin `https://`.
 - **Bloques**: `Enlaces de la asociación` (botón "Ir a la web" + íconos) y `Filtro por área de servicio`. Sin paso de compilación.
+- **Shortcode `[ra_total_asociaciones]`**: imprime cuántas asociaciones hay publicadas en el directorio. Úsalo en cualquier texto (párrafo, encabezado, pie) en lugar de escribir el número: se actualiza solo cuando entra o sale una asociación. Una asociación en borrador o en la papelera no cuenta.
 - **Importador** con los datos de las 28 asociaciones del sitio actual (`data/asociaciones.json`).
 
 ### Importar el directorio
