@@ -94,7 +94,7 @@
 			],
 			"fontSizes": [
 				{ "slug": "small", "name": "Pequeño", "size": "0.875rem", "fluid": false },
-				{ "slug": "medium", "name": "Normal", "size": "1rem", "fluid": false },
+				{ "slug": "medium", "name": "Normal", "size": "1rem", "fluid": true },
 				{ "slug": "large", "name": "Grande", "size": "1.25rem", "fluid": { "min": "1.125rem", "max": "1.25rem" } },
 				{ "slug": "x-large", "name": "Extra grande", "size": "1.625rem", "fluid": { "min": "1.375rem", "max": "1.625rem" } },
 				{ "slug": "xx-large", "name": "Titular", "size": "2.25rem", "fluid": { "min": "1.75rem", "max": "2.25rem" } },
@@ -110,7 +110,7 @@
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--blanco)",
-			"text": "var(--wp--preset--color--texto)"
+			"text": "var(--wp--preset--color--gris-menu)"
 		},
 		"spacing": {
 			"blockGap": "1.5rem",
@@ -121,8 +121,10 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--raleway)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
-			"lineHeight": "1.65"
+			"fontSize": "1.1rem",
+			"fontStyle": "normal",
+			"fontWeight": "500",
+			"lineHeight": "1.55"
 		},
 		"elements": {
 			"link": {
@@ -133,9 +135,10 @@
 				"color": { "text": "var(--wp--preset--color--primario)" },
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--montserrat)",
-					"fontWeight": "400",
+					"fontStyle": "normal",
+					"fontWeight": "500",
 					"lineHeight": "1.25",
-					"letterSpacing": "1px"
+					"letterSpacing": "-0.5px"
 				}
 			},
 			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--huge)", "letterSpacing": "2px", "lineHeight": "1.15" } },
@@ -153,7 +156,7 @@
 				"spacing": { "padding": { "top": "0.8em", "bottom": "0.8em", "left": "1.6em", "right": "1.6em" } },
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-condensed)",
-					"fontSize": "0.95rem",
+					"fontSize": "1rem",
 					"fontWeight": "500",
 					"letterSpacing": "2px",
 					"textTransform": "uppercase",
@@ -181,9 +184,10 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-condensed)",
 					"fontSize": "0.95rem",
-					"letterSpacing": "0.5px",
+					"letterSpacing": "0px",
 					"textTransform": "uppercase"
 				},
+				"spacing": { "blockGap": "var:preset|spacing|20" },
 				"color": { "text": "var(--wp--preset--color--gris-menu)" },
 				"elements": {
 					"link": {

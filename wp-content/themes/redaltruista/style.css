@@ -28,6 +28,29 @@ Text Domain:       redaltruista
 	color: var(--wp--preset--color--primario);
 }
 
+/* Botón del menú móvil al doble del tamaño de WordPress (24px). */
+.ra-header .wp-block-navigation__responsive-container-open svg {
+	width: 48px;
+	height: 48px;
+}
+
+/* Menú móvil también en tablets: WordPress lo cambia a 600px; aquí hasta 1024px. */
+@media (min-width: 600px) and (max-width: 1024px) {
+	.ra-header .wp-block-navigation__responsive-container-open:not(.always-shown) { display: flex; }
+	.ra-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) { display: none; }
+}
+
+/* Los botones del encabezado siempre en una sola fila; en pantallas chicas se compactan. */
+.ra-header .wp-block-buttons { flex-wrap: nowrap; }
+.ra-header .wp-block-button__link { white-space: nowrap; }
+@media (max-width: 599px) {
+	.ra-header .wp-block-button__link {
+		padding: 0.75em 1em;
+		font-size: clamp(0.65rem, 3vw, 0.8rem) !important; /* !important: el bloque trae font-size en línea */
+		letter-spacing: 1px;
+	}
+}
+
 /* ---------- Tarjetas de asociación ---------- */
 .ra-card {
 	height: 100%;
