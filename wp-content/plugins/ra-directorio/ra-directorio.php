@@ -32,6 +32,7 @@ require_once RA_DIR_PATH . 'includes/importer.php';
 require_once RA_DIR_PATH . 'includes/admin-import.php';
 require_once RA_DIR_PATH . 'includes/necesidades.php';
 require_once RA_DIR_PATH . 'includes/necesidades-import.php';
+require_once RA_DIR_PATH . 'includes/editor.php';
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once RA_DIR_PATH . 'includes/cli.php';
