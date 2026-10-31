@@ -68,6 +68,13 @@ Text Domain:       redaltruista
 .ra-card .wp-block-post-title a:hover { color: var(--wp--preset--color--primario-claro); }
 /* El bloque de enlaces queda pegado al fondo de la tarjeta. */
 .ra-card > .ra-enlaces { margin-top: auto; }
+/* En la tarjeta: botón «Ir a la web» chico e íconos de redes al doble (core: 16px). */
+.ra-card .ra-web .wp-block-button__link {
+	padding: 0.6em 1.1em;
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+}
+.ra-card .ra-redes.has-small-icon-size { font-size: 32px; }
 
 /* Móvil: tarjeta horizontal. Logo de 145px a la izquierda con título y áreas; texto y enlaces debajo. */
 @media (max-width: 599px) {
