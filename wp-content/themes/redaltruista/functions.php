@@ -21,11 +21,11 @@ add_action(
 	}
 );
 
-/** Hoja de estilos del tema (complementa a theme.json). */
+/** Hoja de estilos del tema (complementa a theme.json). Versión = fecha del archivo, para que el navegador y el CDN no sirvan una copia vieja. */
 add_action(
 	'wp_enqueue_scripts',
 	static function () {
-		wp_enqueue_style( 'redaltruista', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'redaltruista', get_stylesheet_uri(), array(), (string) filemtime( get_stylesheet_directory() . '/style.css' ) );
 	}
 );
 
