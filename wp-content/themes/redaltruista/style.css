@@ -69,6 +69,34 @@ Text Domain:       redaltruista
 /* El bloque de enlaces queda pegado al fondo de la tarjeta. */
 .ra-card > .ra-enlaces { margin-top: auto; }
 
+/* Móvil: tarjeta horizontal. Logo de 145px a la izquierda con título y áreas; texto y enlaces debajo. */
+@media (max-width: 599px) {
+	.ra-card.is-layout-flex {
+		display: grid;
+		grid-template-columns: 145px 1fr;
+		grid-template-areas:
+			"logo titulo"
+			"logo areas"
+			"texto texto"
+			"enlaces enlaces";
+		column-gap: 1rem;
+		row-gap: 0.4rem;
+	}
+	.ra-card > .wp-block-post-featured-image {
+		grid-area: logo;
+		align-self: center;
+		width: 145px;
+	}
+	.ra-card > .wp-block-post-featured-image img {
+		width: 145px;
+		height: auto !important; /* !important: el bloque trae height en línea */
+	}
+	.ra-card > .wp-block-post-title { grid-area: titulo; align-self: end; }
+	.ra-card > .wp-block-post-terms { grid-area: areas; align-self: start; }
+	.ra-card > .wp-block-post-content { grid-area: texto; margin-top: 0.6rem; }
+	.ra-card > .ra-enlaces { grid-area: enlaces; margin-top: 0.6rem; }
+}
+
 /* ---------- Bloque ra/asociacion-enlaces ---------- */
 .ra-enlaces {
 	display: flex;
