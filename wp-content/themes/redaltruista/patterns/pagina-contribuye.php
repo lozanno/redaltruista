@@ -5,14 +5,13 @@
  * Categories: redaltruista
  * Post Types: page
  * Block Types: core/post-content
- * Description: Contenido completo de /contribuye/: formas de contribuir, lista de necesidades (hoja de Google incrustada) y contacto. Usar con la plantilla "Página".
+ * Description: Contenido completo de /contribuye/: formas de contribuir, lista de necesidades y contacto. Usar con la plantilla "Página".
  *
- * La lista de necesidades la mantiene el cliente en Google Sheets; aquí solo se incrusta.
+ * La lista de necesidades es el bloque ra/necesidades: se administra en el menú Necesidades del panel.
  *
  * @package RedAltruista
  */
 
-$ra_hoja = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSeP-_QG5eDDuwnP3EdMe92Imdnag5O1gwZJ7qdtnLblZaWHoqBaMFz7oVBWRkDKAKbFqfU_64VsAsQ/pubhtml';
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"1170px"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--60)">
@@ -96,17 +95,7 @@ $ra_hoja = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSeP-_QG5eDDuwnP3EdM
 	<p class="has-text-align-center">Lo que hoy piden las asociaciones de la Red: donativos en especie, económicos y voluntariado. Comunícate directamente con el contacto de cada organización.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:html -->
-	<div class="ra-hoja alignwide"><iframe src="<?php echo esc_url( $ra_hoja . '?widget=true&headers=false' ); ?>" title="Lista de necesidades de las asociaciones" loading="lazy"></iframe></div>
-	<!-- /wp:html -->
-
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons">
-		<!-- wp:button {"className":"is-style-outline"} -->
-		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $ra_hoja ); ?>" target="_blank" rel="noreferrer noopener">Abrir la lista completa</a></div>
-		<!-- /wp:button -->
-	</div>
-	<!-- /wp:buttons -->
+	<!-- wp:ra/necesidades {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} /-->
 </div>
 <!-- /wp:group -->
 

@@ -240,17 +240,65 @@ Text Domain:       redaltruista
 /* Tarjetas con el botón pegado abajo, aunque los textos tengan distinto largo. */
 .ra-accion { display: flex; flex-direction: column; }
 .ra-accion > .wp-block-buttons { margin-top: auto; padding-top: var(--wp--preset--spacing--30); }
-.ra-hoja {
-	margin-block: var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);
+
+/* ---------- Bloque ra/necesidades ---------- */
+.ra-nec-filtro { justify-content: center; margin-bottom: var(--wp--preset--spacing--40); }
+.ra-nec-filtro[hidden] { display: none; }
+.ra-nec-filtro .ra-filtro__item { background: #fff; cursor: pointer; }
+.ra-nec-filtro .ra-filtro__item[aria-pressed="true"] { background: var(--wp--preset--color--primario); border-color: var(--wp--preset--color--primario); color: #fff; }
+.ra-nec-lista {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+	gap: var(--wp--preset--spacing--40);
+	align-items: start;
+}
+.ra-nec {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: var(--wp--preset--spacing--40);
+	border: 1px solid #e8eeee;
+	border-radius: 6px;
 	background: #fff;
-	border: 1px solid var(--wp--preset--color--menta);
+	font-size: 0.95rem;
+	line-height: 1.55;
+	overflow-wrap: anywhere;
 }
-.ra-hoja iframe {
-	display: block;
-	width: 100%;
-	height: 600px;
-	border: 0;
+.ra-nec[hidden] { display: none; }
+.ra-nec p { margin: 0; }
+.ra-nec__cabeza { display: flex; align-items: center; gap: 1rem; }
+.ra-nec__logo { flex: 0 0 90px; }
+.ra-nec__logo img { display: block; width: 90px; height: 68px; object-fit: contain; }
+.ra-nec__encabezado { display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; min-width: 0; }
+.ra-nec__tipo {
+	padding: 0.15em 0.7em;
+	border-radius: 999px;
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--oscuro);
 }
+.ra-nec__tipo--especie { background: var(--wp--preset--color--menta); }
+.ra-nec__tipo--economico { background: var(--wp--preset--color--amarillo); }
+.ra-nec__tipo--voluntariado { background: var(--wp--preset--color--coral); color: #fff; }
+.ra-nec__titulo { margin: 0; font-size: 1.15rem; letter-spacing: 0; }
+.ra-nec__asociacion {
+	font-family: var(--wp--preset--font-family--roboto-condensed);
+	font-size: 0.85rem;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+}
+.ra-nec__contacto {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid #e8eeee;
+}
+.ra-nec__persona { flex-basis: 100%; font-weight: 600; color: var(--wp--preset--color--oscuro); }
+.ra-nec__fecha { font-size: var(--wp--preset--font-size--small); opacity: 0.75; }
+.ra-necesidades__vacio { text-align: center; }
 
 /* ---------- Página Eventos ---------- */
 .ra-evento { overflow: hidden; }

@@ -3,6 +3,7 @@
  * Comando WP-CLI.
  *
  *   wp ra-directorio import [--file=<ruta>] [--logos=<carpeta>] [--update] [--dry-run]
+ *   wp ra-directorio import-necesidades [--file=<ruta>] [--dry-run]
  *
  * @package RA_Directorio
  */
@@ -59,3 +60,41 @@ function ra_dir_cli_import( $args, $assoc_args ) {
 }
 
 WP_CLI::add_command( 'ra-directorio import', 'ra_dir_cli_import' );
+
+/**
+ * Importa las necesidades de las asociaciones (la hoja de Google limpia).
+ *
+ * ## OPTIONS
+ *
+ * [--file=<ruta>]
+ * : JSON a importar. Por defecto, data/necesidades.json del plugin.
+ *
+ * [--dry-run]
+ * : Muestra lo que haría sin escribir nada.
+ *
+ * ## EXAMPLES
+ *
+ *     wp ra-directorio import-necesidades --dry-run
+ *
+ * @when after_wp_load
+ *
+ * @param array $args       Argumentos posicionales.
+ * @param array $assoc_args Opciones.
+ */
+function ra_nec_cli_import( $args, $assoc_args ) {
+	$result = ra_nec_import(
+		array(
+			'file'    => isset( $assoc_args['file'] ) ? $assoc_args['file'] : RA_DIR_PATH . 'data/necesidades.json',
+			'dry_run' => \WP_CLI\Utils\get_flag_value( $assoc_args, 'dry-run', false ),
+		)
+	);
+	if ( is_wp_error( $result ) ) {
+		WP_CLI::error( $result->get_error_message() );
+	}
+	foreach ( $result['log'] as $line ) {
+		WP_CLI::log( $line );
+	}
+	WP_CLI::success( sprintf( 'Creadas: %d · Omitidas: %d', $result['created'], $result['skipped'] ) );
+}
+
+WP_CLI::add_command( 'ra-directorio import-necesidades', 'ra_nec_cli_import' );

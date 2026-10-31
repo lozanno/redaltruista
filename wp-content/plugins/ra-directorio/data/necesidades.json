@@ -1,0 +1,134 @@
+[
+	{
+		"id": "hoja-01",
+		"titulo": "Pañales, sillas de ruedas y artículos del hogar",
+		"tipo": "especie",
+		"asociacion": "angeles-en-libertad",
+		"descripcion": "Pañales de adulto y de niño, sillas de ruedas, artículos del hogar en buen estado y funcionales, ropa y calzado, gasas, parches, papel reciclado y tapitas.",
+		"frecuencia": "",
+		"contacto": "Daniela De Vega Fernández Del Valle",
+		"telefono": "322 146 2529",
+		"email": "ael@angelesenlibertad.org"
+	},
+	{
+		"id": "hoja-02",
+		"titulo": "Vales de gasolina para recolectar tapitas",
+		"tipo": "especie",
+		"asociacion": "angeles-en-libertad",
+		"descripcion": "Vales de gasolina Magna para la recolección de tapitas en más de 40 centros de acopio.",
+		"frecuencia": "Constante",
+		"contacto": "Daniela De Vega",
+		"telefono": "322 146 2529",
+		"email": "angelesenlibertad.daniela@gmail.com"
+	},
+	{
+		"id": "hoja-03",
+		"titulo": "Artículos de limpieza y material didáctico",
+		"tipo": "especie",
+		"asociacion": "fundacion-asistencial-para-personas-con-sindrome-de-down-a-c",
+		"descripcion": "Artículos de limpieza y material didáctico (plastilina Resistol).",
+		"frecuencia": "",
+		"contacto": "Edna Isabel Medina Navarrete",
+		"telefono": "322 243 4063",
+		"email": "down_pv@hotmail.com"
+	},
+	{
+		"id": "hoja-04",
+		"titulo": "Insumos para el taller de repostería",
+		"tipo": "especie",
+		"asociacion": "fundacion-asistencial-para-personas-con-sindrome-de-down-a-c",
+		"descripcion": "4 kg de mantequilla\n3 kg de azúcar estándar\n3 kg de azúcar mascabado\n2 kg de nuez\n2 kg de arándanos\n3 docenas de huevo\n3 kg de harina de avena\n4 kg de avena",
+		"frecuencia": "1 vez al mes",
+		"contacto": "Guadalupe Márquez",
+		"telefono": "322 224 9577",
+		"email": "down_pv@hotmail.com"
+	},
+	{
+		"id": "hoja-05",
+		"titulo": "Dos libreros para el material",
+		"tipo": "especie",
+		"asociacion": "fundacion-asistencial-para-personas-con-sindrome-de-down-a-c",
+		"descripcion": "Dos libreros para guardar el material.",
+		"frecuencia": "1 vez",
+		"contacto": "Guadalupe Márquez",
+		"telefono": "322 224 9577",
+		"email": "down_pv@hotmail.com"
+	},
+	{
+		"id": "hoja-06",
+		"titulo": "Alimentos, pañales y ropa",
+		"tipo": "especie",
+		"asociacion": "asilo-padre-aldana",
+		"descripcion": "Alimentos, pañales, ropa, accesorios de baño y de movilidad.",
+		"frecuencia": "",
+		"contacto": "Brenda Maciel Sandoval Bernal",
+		"telefono": "322 356 3889",
+		"email": "asilosanjuandiego.pv@gmail.com"
+	},
+	{
+		"id": "hoja-07",
+		"titulo": "Carne para el comedor",
+		"tipo": "especie",
+		"asociacion": "casa-cultural-mixtli-a-c",
+		"descripcion": "20 kilos de carne: chamorro o costilla picada.",
+		"frecuencia": "1 vez al mes",
+		"contacto": "Sara Ibarra",
+		"telefono": "322 139 8222",
+		"email": "casaculturalmixtli@gmail.com"
+	},
+	{
+		"id": "hoja-08",
+		"titulo": "Maestros para tutorías",
+		"tipo": "voluntariado",
+		"asociacion": "casa-cultural-mixtli-a-c",
+		"descripcion": "Maestros o tutores que ayuden a los niños con sus tareas.",
+		"frecuencia": "Los martes",
+		"contacto": "Sara Ibarra",
+		"telefono": "322 139 8222",
+		"email": "casaculturalmixtli@gmail.com"
+	},
+	{
+		"id": "hoja-09",
+		"titulo": "Rack para colgar ropa",
+		"tipo": "especie",
+		"asociacion": "casa-cultural-mixtli-a-c",
+		"descripcion": "Un rack para colgar ropa en el bazar Mixtli.",
+		"frecuencia": "1 vez",
+		"contacto": "Sara Ibarra",
+		"telefono": "322 139 8222",
+		"email": "casaculturalmixtli@gmail.com"
+	},
+	{
+		"id": "hoja-10",
+		"titulo": "Despensa para el comedor",
+		"tipo": "especie",
+		"asociacion": "horizonte-de-paz",
+		"descripcion": "Por semana:\nJitomate: 20 kg\nCebolla: 15 kg\nCilantro: 2 manojos\nZanahoria: 12 kg\nChayote: 12 kg\nPapa: 30 kg\nArroz: 10 kg\nFrijol: 10 kg\nLenteja: 15 kg\nSoya: 5 kg\n\nComida y cena para 70 personas al día: 210 platillos diarios, 1,470 a la semana.",
+		"frecuencia": "Semanal",
+		"contacto": "Lic. Clara Aguilar",
+		"telefono": "322 189 2174",
+		"email": "horizontedepaz2021@gmail.com"
+	},
+	{
+		"id": "hoja-11",
+		"titulo": "Material para terapias",
+		"tipo": "especie",
+		"asociacion": "pasitos-de-luz-mamas-unidas-para-la-rehabilitacion-de-sus-hijos-a-c",
+		"descripcion": "5 petates\n3 columpios con resorte para puerta\nElectrodos de 3 × 3 para electroestimulación\n6 lockers verticales de 4 puertas\nDetergente en polvo",
+		"frecuencia": "1 vez",
+		"contacto": "Arturo Ayala",
+		"telefono": "322 103 7938",
+		"email": "pasitosdeluz@gmail.com"
+	},
+	{
+		"id": "hoja-12",
+		"titulo": "Rescate de ballenas enmalladas",
+		"tipo": "economico",
+		"asociacion": "ecobac",
+		"descripcion": "Donativo económico de $1,450 para el rescate de ballenas enmalladas.",
+		"frecuencia": "Constante",
+		"contacto": "Astrid Frisch Jordán",
+		"telefono": "322 148 2230",
+		"email": "ecobac.org@gmail.com"
+	}
+]

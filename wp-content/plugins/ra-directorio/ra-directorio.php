@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Red Altruista – Directorio de asociaciones
- * Description:       Tipo de contenido "Asociación", áreas de servicio, campos de enlaces/redes, bloques del directorio e importador.
+ * Description:       Tipo de contenido "Asociación", áreas de servicio, campos de enlaces/redes, necesidades de las asociaciones, bloques del directorio e importador.
  * Version:           1.0.0
  * Requires at least: 6.6
  * Requires PHP:      7.4
@@ -30,6 +30,8 @@ require_once RA_DIR_PATH . 'includes/blocks.php';
 require_once RA_DIR_PATH . 'includes/shortcodes.php';
 require_once RA_DIR_PATH . 'includes/importer.php';
 require_once RA_DIR_PATH . 'includes/admin-import.php';
+require_once RA_DIR_PATH . 'includes/necesidades.php';
+require_once RA_DIR_PATH . 'includes/necesidades-import.php';
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once RA_DIR_PATH . 'includes/cli.php';
@@ -40,6 +42,7 @@ register_activation_hook(
 	static function () {
 		ra_dir_register_post_type();
 		ra_dir_register_taxonomy();
+		ra_nec_register_post_type();
 		ra_dir_seed_terms();
 		flush_rewrite_rules();
 	}

@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ra/necesidades",
+	"title": "Necesidades de las asociaciones",
+	"category": "theme",
+	"icon": "heart",
+	"description": "Lo que hoy necesitan las asociaciones (se administra en el menú Necesidades). En la ficha de una asociación muestra solo las suyas.",
+	"textdomain": "ra-directorio",
+	"usesContext": [ "postId", "postType" ],
+	"attributes": {
+		"deAsociacion": {
+			"type": "boolean",
+			"default": false
+		},
+		"titulo": {
+			"type": "string",
+			"default": "Lo que necesita hoy"
+		},
+		"mostrarFiltro": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true }
+	},
+	"editorScript": "file:./editor.js",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
